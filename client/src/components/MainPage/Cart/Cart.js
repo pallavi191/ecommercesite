@@ -13,7 +13,9 @@ import { Button } from '@mui/material';
 import { useEffect } from 'react';
 import Swal from 'sweetalert2';
 import PaypalButton from './PaypalButton';
+
 import Grid from '@mui/material/Grid';
+import PayButton from './PayButton';
 
 export default function Cart() {
     const state = useContext(GlobalState)
@@ -21,7 +23,7 @@ export default function Cart() {
     const [token] = state.token
     const [callback, setCallback] = state.userAPI.callback
     const [total, setTotal] = useState(0)
-    console.log(cart)
+    // console.log(cart)
 
     useEffect(() => {
         const totalCost = () => {
@@ -145,7 +147,10 @@ export default function Cart() {
                             <TableCell className="table__item" align="right"></TableCell>
                             <TableCell className="table__item" align="right"></TableCell>
                             <TableCell className="table__item" align="right">
-                                <PaypalButton total={total} tranSuccess={tranSuccess} className="paypal__button"/>
+                                {/* <PaypalButton total={total} tranSuccess={tranSuccess} className="paypal__button"/> */}
+
+                               <PayButton cartItems={cart}/>
+
                             </TableCell>
                         </TableRow>
 

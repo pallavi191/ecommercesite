@@ -10,6 +10,7 @@ import Cart from "./Cart/Cart";
 import ProductDetail from "./Products/productDetail/ProductDetail";
 import Admin from "./admin/Admin";
 import History from "./auth/History";
+import CheckoutSuccess from "./Cart/CheckoutSuccess";
 
 
 export default function Pages() {
@@ -27,10 +28,11 @@ export default function Pages() {
                 <Route path="/login" exact component={isLogged ? NotFound : Login}/>  
                 <Route path="/history" exact component={isLogged ? History : NotFound}/>
                 <Route path="/cart" exact component={Cart}/>
+                <Route path="/checkout-success" exact component={CheckoutSuccess}/>
                 <Route path="/admin" exact component={isAdmin ? Admin : NotFound}/>
                 <Route path="/admin/:id" exact component={isAdmin ? Admin : NotFound}/> 
                 
-                <Route path="#" exact component={NotFound}/>
+                <Route path="*" exact component={NotFound}/>
             </Switch>
         // </div>
     )

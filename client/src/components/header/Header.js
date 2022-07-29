@@ -40,7 +40,7 @@ export default function Header() {
             <Link to="/" onClick={() => setCategory("")}><img src={Logo} alt="" className="logo__image"/></Link>
           </div>
             <div className="languages">
-              <p>Vi-VN | En-US</p>
+              <p>lets shop together</p>
             </div>
             <div className="navbar__container">
             <label htmlFor="menu__input"><i className="fas fa-bars menu__icon header__icon"></i></label>
